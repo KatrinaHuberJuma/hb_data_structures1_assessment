@@ -1,0 +1,91 @@
+Part 1: Discussion Questions
+################################################################################
+
+Make a new file and add your answers to the questions below. Push the file to your github repository along with the other solutions.
+
+Runtime
+
+When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+    
+    If the crackers are, as I assume them to be, unsorted (or if they are sorted into one long single-file train of crackers), the runtime would be O(n). That is because one might have to look at each and every individual cracker before being able to certainly say "yes elephant" or "no elephant." This question could be answered in constant time if all crackers were grouped into cracker-packets by animal-type, but that would be kind of boring for consumers.
+
+
+
+Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+    O(1)
+    O(log n)
+    O(n)
+    O(n log n)
+    O(n2)
+    O(2n)
+
+
+
+
+
+
+Stacks and Queues
+
+In the following cases, would a stack or queue be a more appropriate data structure?
+    The process of loading and unloading pallets onto a flatbed truck
+        stack
+
+    Putting bottle caps on bottles of beer as they roll down an assembly line
+        queue
+
+    Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+        queue
+
+Describe two more situations where a queue would be an appropriate data structure.
+    DMV --first come first served
+    instructions (that were written in order) -- write step one first, do step one first
+
+Describe two more situations where a stack would be an appropriate data structure.
+    Undo button --undo most recent mistake first
+    visiting your treasure
+            It is at the end of a long hallway. The hallway is blocked by 6 locked doors. Each door is unlocked by a puzzle. There is no other way in. You have to do each puzzle to get in to see your treasure, and your have to reset each puzzle as you leave. Mind the dragon.
+
+
+
+
+(Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+Given the linked list below, which are the nodes? 
+    The nodes are in the second row of boxes. Each node is comprised of two boxes, one containing the data and one with the word "next" and an arrow pointing to the right
+
+What is the data for each node? 
+    "Apple", "Berry", "Cherry"
+
+Where is the head? 
+    The first node, with "Apple" data
+
+Where is the tail? 
+    the node pointing to None, the last node, with "Cherry" data (although there is no indication that the LLIST has any awareness of this fact)
+
+
+
+
+
+What’s the difference between doubly- and singly-linked lists?
+    Singly linked list nodes are aware only of the next node. Doubly linked nodes are aware of the next node AND the previous node.
+
+
+Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+    Because with the notion of a tail, we can go directly to the last node in constant time, while without it we have to traverse the list in linear time.
+
+
+
+
+
+Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burritos (starting at food)?
+    1 food > 
+    2 italian >                             3 indian >                  4 mexican > 
+    5 lasagna > 6 pizza >           7 tikka masala > 8 saag >           9 BURRITOS!
+
+Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? 
+    1 food > 
+    2 italian > 
+    3 pizza > 
+    4 CHICAGO STYLE!
+
+How is a binary search tree different from other trees?
+    As with other trees, each node is itself a tree. Unlike other trees, each node may have only two children, a left child and a right child. The left child node stores a node with value that is "less" than the value of the parent node, while the right child node stores a node with a value that is "greater" than the parent node (values equal to the parent might be deemed duplicates and discarded or go to either side, depending on the preferences/requiremnts of the coder responsible for making the node class)
